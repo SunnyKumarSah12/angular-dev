@@ -1,0 +1,28 @@
+<div class="view-container" *ngIf="demand">
+    <div class="header">
+      <h2>{{ demand.role }} - {{ demand.projectName }}</h2>
+      <button mat-icon-button color="primary" (click)="goToEdit()" matTooltip="Edit Demand">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+  
+    <mat-divider></mat-divider>
+  
+    <div class="info-section">
+      <div><strong>Client:</strong> {{ demand.clientName }}</div>
+      <div><strong>Department:</strong> {{ demand.departmentName }}</div>
+      <div><strong>YOE:</strong> {{ demand.yoe }}</div>
+      <div><strong>Status:</strong> {{ demand.status }}</div>
+      <div><strong>Location:</strong> {{ demand.location }}</div>
+      <div><strong>Recruiter:</strong> {{ demand.recruiterName }}</div>
+      <div><strong>Skillset:</strong> {{ demand.skillset }}</div>
+      <div><strong>Priority:</strong> {{ demand.priority }}</div>
+      <div><strong>Description:</strong> {{ demand.jobDescription }}</div>
+      <!-- Add more fields as needed -->
+    </div>
+  </div>
+  
+  <div *ngIf="!demand" class="no-data">
+    <p>Demand not found.</p>
+  </div>
+  

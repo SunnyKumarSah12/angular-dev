@@ -11,6 +11,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDividerModule } from '@angular/material/divider';
 
 import { DemandManagementRoutingModule } from './demand-management-routing.module';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -24,6 +25,8 @@ import { AddDemandComponent } from './add-demand/add-demand.component';
 import { DemandFormComponent } from './demand-form/demand-form.component';
 import { EditDemandComponent } from './edit-demand/edit-demand.component';
 import { AssignDemandComponent } from './assign-demand/assign-demand.component';
+import { ViewDemandComponent } from './view-demand/view-demand.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,7 @@ import { AssignDemandComponent } from './assign-demand/assign-demand.component';
     AddDemandComponent,
     EditDemandComponent,
     AssignDemandComponent,
+    ViewDemandComponent,
     DemandFormComponent
   ],
   imports: [
@@ -38,6 +42,8 @@ import { AssignDemandComponent } from './assign-demand/assign-demand.component';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
+    MatDividerModule,
+    MatTooltipModule,
     MatInputModule,
     MatTableModule,
     MatButtonModule,

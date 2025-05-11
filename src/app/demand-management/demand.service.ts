@@ -141,5 +141,9 @@ export class DemandService {
     this.demandSubject.next(updated);
   }
 
+  getDemandById(id: number): Demand | undefined {
+    return this.demandSubject.value.find(d => d.id === id);
+  }
+
 
 }

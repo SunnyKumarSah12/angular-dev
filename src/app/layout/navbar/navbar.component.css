@@ -1,0 +1,14 @@
+.brand {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  a.active-link {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+  }
+  

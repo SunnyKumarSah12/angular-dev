@@ -1,0 +1,33 @@
+<h2 mat-dialog-title>
+    {{ mode === 'edit' ? 'Edit Assignments' : 'Assign to Demand' }}
+  </h2>
+<mat-dialog-content>
+    <form (ngSubmit)="onAssign()">
+        <mat-form-field appearance="fill">
+            <mat-label>Assigned Person</mat-label>
+            <input matInput [(ngModel)]="assignedDemand.eyGdsTaSpoc" name="assignedPerson" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Client SPOC</mat-label>
+            <input matInput [(ngModel)]="assignedDemand.clientEvaluationSpoc" name="clientSpoc" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Competency Head</mat-label>
+            <input matInput [(ngModel)]="assignedDemand.eyGdsCompetencyHead" name="competencyHead" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Hiring Manager</mat-label>
+            <input matInput [(ngModel)]="assignedDemand.clientHiringManagerName" name="hiringManager" required />
+        </mat-form-field>
+
+        <!-- Add other required fields if needed -->
+
+        <div mat-dialog-actions>
+            <button mat-button type="button" (click)="onClose()">Cancel</button>
+            <button mat-raised-button color="primary" type="submit">Assign</button>
+        </div>
+    </form>
+</mat-dialog-content>

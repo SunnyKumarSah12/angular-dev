@@ -1,0 +1,15 @@
+<div class="container">
+    <h2>Add New Demand</h2>
+  
+    <div class="d-flex align-center mb-3">
+      <mat-slide-toggle [(ngModel)]="isBulk" class="mr-3">Bulk Demand</mat-slide-toggle>
+  
+      <mat-form-field *ngIf="isBulk" appearance="fill" class="bulk-input">
+        <mat-label>Number of Demands</mat-label>
+        <input matInput type="number" [(ngModel)]="bulkCount" min="1" />
+      </mat-form-field>
+    </div>
+  
+    <app-demand-form [mode]="'add'" (formSubmit)="onSubmit($event)"></app-demand-form>
+  </div>
+  

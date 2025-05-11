@@ -1,0 +1,16 @@
+<div class="container" *ngIf="selectedDemand">
+    <h2>Edit Demand</h2>
+
+    <ng-container *ngIf="selectedDemand; else loading">
+        <app-demand-form [mode]="'edit'" [demand]="selectedDemand" (formSubmit)="onSubmit($event)">
+        </app-demand-form>
+    </ng-container>
+
+
+    <button mat-raised-button color="accent" (click)="openAssignDemandModal()">Assign Demand</button>
+
+
+    <ng-template #loading>
+        <p>Loading demand data...</p>
+    </ng-template>
+</div>

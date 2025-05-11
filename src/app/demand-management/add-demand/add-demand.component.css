@@ -1,0 +1,18 @@
+.d-flex {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.bulk-input {
+    width: 200px;
+}
+
+.mr-3 {
+    margin-right: 16px;
+}
+
+.mat-slide-toggle {
+    margin-bottom: 8px;
+    /* Adjust this value as needed */
+}

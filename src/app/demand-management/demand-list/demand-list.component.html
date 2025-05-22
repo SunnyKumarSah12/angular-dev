@@ -52,6 +52,9 @@
           <button mat-icon-button color="accent" [routerLink]="['/demand/view', demand.id]">
             <mat-icon>visibility</mat-icon>
           </button>
+          <button mat-icon-button color="primary" (click)="openCloneDialog(demand)">
+            <mat-icon matTooltip="Clone Demand">content_copy</mat-icon>
+          </button>
           <button mat-icon-button color="primary" (click)="editDemand(demand)">
             <mat-icon>edit</mat-icon>
           </button>

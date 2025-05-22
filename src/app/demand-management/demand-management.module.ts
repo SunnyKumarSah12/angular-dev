@@ -27,6 +27,7 @@ import { EditDemandComponent } from './edit-demand/edit-demand.component';
 import { AssignDemandComponent } from './assign-demand/assign-demand.component';
 import { ViewDemandComponent } from './view-demand/view-demand.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { ConfirmDialogComponent } from '../shared/confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     EditDemandComponent,
     AssignDemandComponent,
     ViewDemandComponent,
-    DemandFormComponent
+    DemandFormComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     CommonModule,

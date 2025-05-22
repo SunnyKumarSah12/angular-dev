@@ -49,13 +49,13 @@ export class DemandService {
       eyGdsTaSpoc: '',
       eyGdsEvaluationSpoc: '',
       eyGdsCompetencyHead: '',
-      clientEvaluationSpoc: 'John Doe',
-      clientCalibrationSpoc: 'Jane Doe',
+      clientEvaluationSpoc: '',
+      clientCalibrationSpoc: '',
       clientHiringManagerName: '',
       clientHiringManagerEmail: '',
       location: 'New York',
       priority: 'High',
-      recruiterName: 'Michael Smith',
+      recruiterName: '',
       recruiterEmail: '',
       status: 'Open',
     },
@@ -76,13 +76,13 @@ export class DemandService {
       eyGdsTaSpoc: '',
       eyGdsEvaluationSpoc: '',
       eyGdsCompetencyHead: '',
-      clientEvaluationSpoc: 'Sam Doe',
-      clientCalibrationSpoc: 'Sara Lee',
+      clientEvaluationSpoc: '',
+      clientCalibrationSpoc: '',
       clientHiringManagerName: '',
       clientHiringManagerEmail: '',
       location: 'Chicago',
       priority: 'Medium',
-      recruiterName: 'Lisa Wong',
+      recruiterName: '',
       recruiterEmail: '',
       status: 'Open',
     }
@@ -145,5 +145,48 @@ export class DemandService {
     return this.demandSubject.value.find(d => d.id === id);
   }
 
+  getEyTaSpocOptions(): Observable<{ name: string; email: string }[]> {
+    return of([
+      { name: 'EyTaSpocA', email: 'eytaspoc.a@example.com' },
+      { name: 'EyTaSpocB', email: 'eytaspoc.b@example.com' },
+      { name: 'EyTaSpocC', email: 'eytaspoc.c@example.com' },
+    ]);
+  }
+
+  getEyCompetencyHeads(): Observable<{ name: string; email: string }[]> {
+    return of([
+      { name: 'CompetencyA', email: 'eycompetency.a@example.com' },
+      { name: 'CompetencyB', email: 'eycompetency.b@example.com' },
+      { name: 'CompetencyC', email: 'eycompetency.c@example.com' },
+    ]);
+  }
+
+  getEyEvaluationSpocOptions(): Observable<{ name: string; email: string }[]> {
+    return of([
+      { name: 'EvaluationSpocA', email: 'eyevaluationspoc.a@example.com' },
+      { name: 'EvaluationSpocB', email: 'eyevaluationspoc.b@example.com' },
+    ]);
+  }
+
+  getClientHiringManagers(): Observable<{ name: string; email: string }[]> {
+    return of([
+      { name: 'ClientHiringManager A', email: 'clienthiringmanager.a@example.com' },
+      { name: 'ClientHiringManager B', email: 'clienthiringmanager.b@example.com' },
+    ]);
+  }
+
+  getClientEvaluationSpocOptions(): Observable<{ name: string; email: string }[]> {
+    return of([
+      { name: 'ClientEvaluationSpocA', email: 'clientevaluationspoc.a@example.com' },
+      { name: 'ClientEvaluationSpocB', email: 'clientevaluationspoc.b@example.com' },
+    ]);
+  }
+  
+  getClientCalibrationSpocOptions(): Observable<{ name: string; email: string }[]> {
+    return of([
+      { name: 'ClientCalibrationSpocA', email: 'clientcalibrationspoc.a@example.com' },
+      { name: 'ClientCalibrationSpocB', email: 'clientcalibrationspoc.b@example.com' },
+    ]);
+  }
 
 }

@@ -1,9 +1,18 @@
-table {
-    width: 100%;
-  }
-  
-  .mat-table-responsive {
-    overflow-x: auto;
-    display: block;
-  }
-  
+.table-wrapper {
+  width: 100%;
+  max-width: 98%;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+}
+
+.full-width-table {
+  width: 100%;
+  text-align: center;
+}
+
+mat-header-cell, mat-cell {
+  text-align: center;
+  padding: 12px;
+}

@@ -1,0 +1,12 @@
+<mat-card class="notifications-card">
+    <mat-card-title>Notifications</mat-card-title>
+    <mat-divider></mat-divider>
+    <mat-list class="notifications-list">
+      <mat-list-item *ngFor="let notif of notifications">
+        <mat-icon matListIcon [ngClass]="notif.type">{{ getIcon(notif.type) }}</mat-icon>
+        <div matLine>{{ notif.message }}</div>
+        <div matLine class="timestamp">{{ notif.timestamp }}</div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card>
+  

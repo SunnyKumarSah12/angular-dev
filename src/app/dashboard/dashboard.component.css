@@ -2,3 +2,25 @@
     background-color: #f5f5f5;
     min-height: 100vh;
   }
+
+
+  .dashboard-layout {
+    padding: 20px;
+  }
+  
+  .bottom-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .aging-table {
+    flex: 2;
+    min-width: 60%;
+  }
+  
+  .notifications-box {
+    flex: 1;
+    min-width: 300px;
+  }
+  

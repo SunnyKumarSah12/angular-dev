@@ -1,0 +1,55 @@
+<mat-card>
+    <mat-card-title>Demand Aging</mat-card-title>
+    <div class="mat-elevation-z2">
+      <table mat-table [dataSource]="dataSource" matSort class="mat-table-responsive">
+  
+        <!-- Demand ID Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Demand ID</th>
+          <td mat-cell *matCellDef="let row">{{ row.id }}</td>
+        </ng-container>
+  
+        <!-- Client Name Column -->
+        <ng-container matColumnDef="clientName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Client</th>
+          <td mat-cell *matCellDef="let row">{{ row.clientName }}</td>
+        </ng-container>
+  
+        <!-- Role Column -->
+        <ng-container matColumnDef="role">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Role</th>
+          <td mat-cell *matCellDef="let row">{{ row.role }}</td>
+        </ng-container>
+  
+        <!-- Created Date Column -->
+        <ng-container matColumnDef="createdDate">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Created</th>
+          <td mat-cell *matCellDef="let row">{{ row.createdDate | date: 'dd-MMM-yyyy' }}</td>
+        </ng-container>
+  
+        <!-- Status Column -->
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+          <td mat-cell *matCellDef="let row">{{ row.status }}</td>
+        </ng-container>
+  
+        <!-- Priority Column -->
+        <ng-container matColumnDef="priority">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Priority</th>
+          <td mat-cell *matCellDef="let row">{{ row.priority }}</td>
+        </ng-container>
+  
+        <!-- Aging Column -->
+        <ng-container matColumnDef="agingDays">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Aging (days)</th>
+          <td mat-cell *matCellDef="let row">{{ row.agingDays }}</td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+  
+      <mat-paginator [pageSize]="5" showFirstLastButtons></mat-paginator>
+    </div>
+  </mat-card>
+  
